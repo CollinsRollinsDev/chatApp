@@ -1,8 +1,52 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Dashboard from '../components/Dashboaard/Dashboard'
+import AuthIn from '../components/Auth/Auth-In'
+import { useState, useEffect } from 'react';
+import useLocalStorage from '../Hooks/useLocalStorage'
+import { ContactsProvider } from '../Context/ContactsProvider'
+import { ConversationsProvider } from '../Context/ConversationsProvider'
+import { SocketProvider } from '../Context/SocketProvider'
 
 export default function Home() {
+// const [token, setToken] = useLocalStorage()
+const [token, setToken] = useState()
+
+const tokenValidation = async() => {
+  let myToken
+  if(typeof window !== "undefined"){
+   await  localStorage.getItem('token') === null && localStorage.getItem('token') === undefined ?
+  localStorage.setItem('CrDevToken', token) :  setToken(localStorage.getItem("CrDevToken"))
+  // myToken = localStorage.getItem("CrDevToken")
+  setToken(localStorage.getItem("CrDevToken"))
+
+  }
+  console.log(myToken)
+}
+
+// useEffect(() => {
+//   let myToken
+//   localStorage.getItem('CrDevToken') != null && localStorage.getItem('CrDevToken') != undefined && localStorage.getItem('CrDevToken') != "undefined" ?
+//   myToken = localStorage.getItem("CrDevToken") :  localStorage.setItem("CrDevToken", token)
+//   myToken = localStorage.getItem("CrDevToken")
+//   // setToken(localStorage.getItem("CrDevToken"))
+//   setToken(myToken)
+//   console.log(myToken)
+// }, [token])
+
+
+const dashboard = (
+  <SocketProvider id ={token}>
+  <ContactsProvider>
+    <ConversationsProvider id={token}>
+    <Dashboard id={token} /> 
+    </ConversationsProvider>
+  </ContactsProvider>
+  </SocketProvider>
+
+)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,59 +55,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      {/* <Dashboard /> */}
+      
+      {
+        token ? dashboard : <AuthIn onTokenSubmit={setToken} /> 
+      }
     </div>
   )
 }

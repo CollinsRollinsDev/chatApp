@@ -1,0 +1,1 @@
+export const GET_SIDEMENU = "GET_SIDEMENU";

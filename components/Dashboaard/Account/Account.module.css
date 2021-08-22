@@ -1,0 +1,171 @@
+.container{
+    height: 100vh;
+    width: 30vw;
+    margin-left: 5vw;
+    background-color: rgb(51, 51, 51);
+    position: absolute;
+    top: 0;
+    overflow-y: auto;
+}
+.container::-webkit-scrollbar {
+    display: none;
+  }
+  .container {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+
+.AccountHead{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 3px black;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 2;
+}
+.AccountHead div{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+.head{
+    /* background-color: orange; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 2%; */
+}
+.head h2{
+    flex: 5;
+    font-size: 18px;
+    color: white;
+    margin-left: 5%;
+}
+.subHead{
+    /* background-color: white; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5%;
+    column-gap: 20px;
+    color: white;
+}
+.body{
+    margin-top: 20px;
+    width: 100%;
+    height: fit-content;
+    padding: 2%;
+    /* background-color: red; */
+}
+.profileHead{
+    width: 100%;
+    height: 230px;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.dpSec{
+    flex: 4;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dp{
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    background-color: rgb(12, 12, 129);
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 4px;
+}
+.secondSec{
+    flex: 6;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgba(12, 12, 129, 0.562); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* row-gap: 2px; */
+    flex-direction: column;
+}
+.name{
+    margin-top: -10%;
+    font-size: 22px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: 700;
+}
+.logout{
+    height: 40px;
+    width: 35%;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: rgb(48, 47, 47);
+    text-align: center;
+    font-weight: 700;
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+.logout:hover{
+    background-color: rgb(12, 12, 129);
+    color: white;
+}
+.profileLists{
+    margin-top: 20px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.profileLists div{
+    height: 60px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(22, 22, 22);
+    row-gap: 10px;
+    align-items: flex-start;
+}
+.profileLists div .details{
+    flex: 6;
+    /* background-color: green; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.profileLists div .iconSec{
+    flex: 2;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileLists div p{
+    margin: 0;
+    padding: 0 5%;
+    color: white;
+  font-size: 14px;
+}

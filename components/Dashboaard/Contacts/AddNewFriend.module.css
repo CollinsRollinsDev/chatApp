@@ -1,0 +1,74 @@
+.container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.664);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container h1{
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: -15%;
+}
+.container form {
+    height: fit-content;
+    width: 40%;
+    /* background-color: blue; */
+    padding: 2%;
+    row-gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.container form input{
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    outline: none;
+    padding: 2%;
+}
+.container form button{
+    height: 40px;
+    width: 50%;
+    padding: 2%;
+    background-color:  rgb(32, 32, 32);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+.container form button:hover, .cancel:hover{
+    background-color: rgb(2, 2, 82);
+}
+.container form button:active, .cancel:active{
+    opacity: 0;
+}
+.cancel{
+    height: 40px;
+    width: 100px;
+    background-color:  rgb(32, 32, 32);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}

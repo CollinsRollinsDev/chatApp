@@ -1,0 +1,55 @@
+.container{
+    height: 100vh;
+    width: 5vw;
+    background-color: rgb(12, 12, 129);
+}
+.barCodeBox{
+    height: 20%;
+    width: 100%;
+    /* background-color: pink; */
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.barCodeBox div{
+    /* height: 100%;
+    width: 80%; */
+    height: 55px;
+    width: 55px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+}
+
+.tabs{
+    margin-top: 100px;
+    height: 50%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    padding: 2%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.tabs div{
+    height: 100%;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabs div:hover{
+    opacity: 0.8;
+}
+.tabs div:active{
+    opacity: 0.1;
+}
