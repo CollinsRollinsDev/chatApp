@@ -17,6 +17,7 @@
     font-weight: 700;
     margin-top: -15%;
 }
+
 .container form {
     height: fit-content;
     width: 40%;
@@ -71,4 +72,22 @@
     position: absolute;
     bottom: 10%;
     right: 10%;
+}
+
+@media screen and (max-width:872px){
+
+    .container form {
+        height: fit-content;
+        width: 80%;
+    }
+
+    .cancel{
+        height: 53px;
+        width: 53px;
+        border-radius: 100%;
+        font-size: 10px;
+        right: 5%;
+    }
+    
+
 }

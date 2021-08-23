@@ -25,10 +25,11 @@
     padding: 2%;
     row-gap: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
 }
+
 .container form input{
     height: 40px;
     width: 100%;
@@ -74,14 +75,17 @@
     right: 10%;
     cursor: pointer;
 }
+
 .select{
     display: flex;
-    justify-content: space-around;
+    justify-content:flex-start;
     align-items: center;
     height: 40px;
     width: 40%;
     /* background-color: red; */
     padding: 2%;
+    position: relative;
+
 }
 .select div{
     font-size: 17px;
@@ -91,4 +95,84 @@
 .select input{
     height: 15px !important;
     width: 15px  !important;
+    position: absolute;
+    right: 0;
+}
+
+
+@media screen and (max-width:872px){
+
+    .container form {
+        height: fit-content;
+        width: 80%;
+    }
+
+    .cancel{
+        height: 53px;
+        width: 53px;
+        border-radius: 100%;
+        font-size: 10px;
+        right: 5%;
+    }
+
+.container form button{
+    height: 40px;
+    width: 40%;
+    padding: 2% ;
+    background-color:  rgb(32, 32, 32);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+.container form button:hover, .cancel:hover{
+    background-color: rgb(2, 2, 82);
+}
+.container form button:active, .cancel:active{
+    opacity: 0;
+}
+.cancel{
+    height: 40px;
+    width: 100px;
+    background-color:  rgb(32, 32, 32);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    cursor: pointer;
+}
+.select{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    height: 40px;
+    width: 90%;
+    /* background-color: red; */
+    padding: 2%;
+    position: relative;
+}
+.select div{
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    /* background-color: orange; */
+    text-align: left;
+}
+.select input{
+    height: 20px !important;
+    width: 20px  !important;
+    position: absolute;
+    right: 0;
+}
+
+
 }
