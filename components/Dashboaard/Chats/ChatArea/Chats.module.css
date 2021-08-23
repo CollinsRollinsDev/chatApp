@@ -275,10 +275,12 @@ flex-direction: column;
         font-size: 11px;
     }
     .container form, .mobileContainer form{
-        flex: 0.7;
+        flex: unset;
         background-color: rgb(51, 51, 51);
         position: -webkit-sticky;
         position: sticky;
+        height: 50px;
+        width: 100%;
         bottom: 0;
         z-index: 2;
     }
