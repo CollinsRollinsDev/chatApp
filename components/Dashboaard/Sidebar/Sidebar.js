@@ -3,9 +3,13 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updatingSideMenu } from "../../../redux-store/actions/sideMenuAction";
+
+
+
+
 const Sidebar = () => {
-  // const testState = useSelector(state => state.user.userDetails);
-  // console.log(`testing redux is : ${testState}`)
+  const openChat = useSelector(state => state.openChatReducer.openChat);
+
   const dispatch = useDispatch();
   let [sideMenu, setSideMenu] = useState();
 
@@ -31,6 +35,9 @@ const Sidebar = () => {
 
   return (
     <>
+    {
+
+    !openChat ? 
       <section className={styles.container}>
         <section className={styles.barCodeBox}>
           <div className={styles.logoDiv}>
@@ -101,6 +108,10 @@ const Sidebar = () => {
           </div>
         </section>
       </section>
+      : 
+      null
+      
+      }
     </>
   );
 };
