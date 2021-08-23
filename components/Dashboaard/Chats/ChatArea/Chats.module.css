@@ -282,6 +282,7 @@ flex-direction: column;
         height: 50px;
         width: 100%;
         bottom: 0;
+        top: 100%;
         z-index: 2;
     }
     .container form button, .mobileContainer form button{
