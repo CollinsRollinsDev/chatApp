@@ -2,6 +2,13 @@
     height: 100vh;
     width: 5vw;
     background-color: rgb(12, 12, 129);
+    display: block;
+}
+.mobileContainer{
+    height: 100vh;
+    width: 5vw;
+    background-color: rgb(12, 12, 129);
+    display: none;
 }
 .barCodeBox{
     height: 20%;
@@ -58,6 +65,17 @@
 
 @media screen and (max-width:872px){
     .container{
+        height: 50px;
+        width: 100%;
+        background-color: rgb(12, 12, 129);
+        position: fixed;
+        bottom: 0;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 2;
+        display: none;
+    }
+    .mobileContainer{
         height: 50px;
         width: 100%;
         background-color: rgb(12, 12, 129);
