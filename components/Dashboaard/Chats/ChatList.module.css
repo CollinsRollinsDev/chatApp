@@ -221,7 +221,18 @@
     .createConversation:active{
         opacity: 0;
     }
-    
+    .mobileContainer .subHead input{
+        width: 50%;
+    }
+    .subHead{
+        /* background-color: white; */
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 5%;
+        column-gap: 20px;
+    }
 
 
 }
