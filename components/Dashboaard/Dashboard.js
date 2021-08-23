@@ -23,7 +23,11 @@ const Dashboard = ({ id }) => {
             {/* <Contacts /> */}
             {/* <Account /> */}
             {
-                menu == "chat" ? <ChatList /> : menu == "call" ? <CallLists /> : menu == "contact" ? <Contacts /> : menu == "account" ? <Account id={id} /> : <ChatList />
+                menu == "chat" ? <ChatList /> : 
+                menu == "call" ? <CallLists /> : menu == "contact" ? <Contacts /> : menu == "account" ? <Account id={id} />
+                 : 
+                //  null
+                  <ChatList />
             }
             </section>
         </>

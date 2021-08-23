@@ -1,1 +1,3 @@
 export const GET_SIDEMENU = "GET_SIDEMENU";
+export const GET_OPENCHAT = "GET_OPENCHAT";
+export const GET_CLOSECHAT = "GET_CLOSECHAT";

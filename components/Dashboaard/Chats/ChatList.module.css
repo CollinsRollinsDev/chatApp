@@ -6,12 +6,23 @@
     position: absolute;
     top: 0;
     overflow-y: auto;
+    display: block;
+}
+.mobileContainer{
+    height: 100vh;
+    width: 30vw;
+    margin-left: 5vw;
+    background-color: rgb(51, 51, 51);
+    position: absolute;
+    top: 0;
+    overflow-y: auto;
+    display: none;
 }
 
-.container::-webkit-scrollbar {
+.container::-webkit-scrollbar, .mobileContainer::-webkit-scrollbar {
     display: none;
   }
-  .container {
+  .container, .mobileContainer {
     -ms-overflow-style: none;  
     scrollbar-width: none;  
   }
@@ -100,6 +111,7 @@
     align-items: center;
     column-gap: 20px;
     color: white;
+    position: relative;
 }
 .msgArea:hover{
     background-color: rgb(12, 12, 129);
@@ -160,4 +172,56 @@
 }
 .createConversation:active{
     opacity: 0;
+}
+.detect{
+    background-color: transparent;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    display: none;
+}
+@media screen and (max-width:872px){
+    .detect{
+        display: block;
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+        margin-left: unset;
+        display: none;
+    } 
+    .mobileContainer{
+        height: 100%;
+        width: 100%;
+        margin-left: unset;
+        display: block;
+    }
+    .createConversation{
+        height: 53px;
+        width: 53px;
+        border-radius: 100%;
+        background-color: rgb(1, 1, 107);
+        color: white;
+        font-weight: 700;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        font-size: 8px;
+        cursor: pointer;
+    }
+    .createConversation:hover{
+        opacity: 0.7;
+    }
+    .createConversation:active{
+        opacity: 0;
+    }
+    
+
+
 }

@@ -14,7 +14,6 @@
     align-items: center;
     row-gap: 20px;
 }
-
 .barCodeBox div{
     /* height: 100%;
     width: 80%; */
@@ -52,4 +51,29 @@
 }
 .tabs div:active{
     opacity: 0.1;
+}
+.container svg{
+    cursor: pointer;
+}
+
+@media screen and (max-width:872px){
+    .container{
+        height: 50px;
+        width: 100%;
+        background-color: rgb(12, 12, 129);
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 2;
+    }
+    .barCodeBox{
+        display: none;
+    }
+    .tabs{
+        margin: unset;
+        height: 100%;
+        flex-direction: row;
+    }
 }

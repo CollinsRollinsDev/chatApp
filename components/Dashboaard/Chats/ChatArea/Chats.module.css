@@ -13,6 +13,21 @@
     /* border-style: solid; */
     box-shadow: -1px -1px 3px black;
 }
+.mobileContainer{
+    height: 100vh;
+    width: 60vw;
+    margin-left: 35vw;
+    background-color: rgb(51, 51, 51);
+    position: absolute;
+    top: 0;
+    /* overflow-y: auto; */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* border-style: solid; */
+    box-shadow: -1px -1px 3px black;
+}
 .header{
     height: 70px;
     width: 100%;
@@ -96,7 +111,7 @@ flex-direction: column;
     overflow: auto;
 }
 
-.container form{
+.container form, .mobileContainer form{
     flex: 1.5;
     /* background-color: orange; */
     width: 100%;
@@ -105,7 +120,7 @@ flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-.container form textarea{
+.container form textarea, .mobileContainer form textarea{
     resize: none;
     height: 90%;
     width: 75%;
@@ -114,7 +129,7 @@ flex-direction: column;
     border-style: solid;
     border-color: transparent;
 }
-.container form  button{
+.container form button, .mobileContainer form button{
     height: 90%;
     width: 21%;
     padding: 1%;
@@ -203,8 +218,89 @@ flex-direction: column;
     margin-top: 30px;
     position: relative;
 }
-/* .cover{
-    position: absolute;
-    height: 100%;
-     width: 100%;
-} */
+.backBtn{
+    display: none;
+}
+@media screen and (max-width:872px){
+    .container{
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
+        display: none;
+    }
+    .mobileContainer{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header{
+        height: 50px;
+        width: 100%;
+        padding: 0 2%;
+    }
+    .dpDiv{
+        flex: 1;
+        height: 70%;
+        width: 70%;
+    }
+    .nameDiv{
+        flex: 4;
+        height: 100%;
+        width: 100%;
+    }
+    .iconDiv{
+        flex: 2;
+        /* background-color: red; */
+    }
+    .iconDiv svg{
+        fill: white;
+        cursor: pointer;
+    }
+    
+    .dpDiv div{
+        height: 45px;
+        width: 45px;
+        background-color: red;
+    }
+    .nameDiv div{
+        flex: 1;
+        font-size: 14px;
+    }
+    .username{
+        font-size: 20px;
+    }
+    .status{
+        font-size: 11px;
+    }
+    .container form, .mobileContainer form{
+        flex: 0.7;
+        background-color: rgb(51, 51, 51);
+        position: relative;
+        z-index: 2;
+    }
+    .container form button, .mobileContainer form button{
+        background-color: green;
+        color: white;
+    }
+    .container form textarea{
+        outline: none;
+    }
+    .mobileContainer form textarea{
+        outline: none;
+        width: 60%;
+    }
+    .mobileContainer .backBtn{
+        height: 90%;
+        width: 15%;
+        border-radius: 10px;
+        color: white;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+}

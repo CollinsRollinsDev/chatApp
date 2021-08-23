@@ -71,10 +71,10 @@ const Contacts = () => {
             </section>
           </section>
         </div>
-        <div className={styles.subHead}>
+        {/* <div className={styles.subHead}>
           <input type="search" name="" id="" className={styles.search1} />
           <input type="search" name="" id="" className={styles.search2} />
-        </div>
+        </div> */}
       </section>
 
       {/* contact area */}
