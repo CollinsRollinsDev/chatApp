@@ -10,8 +10,10 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    /* border-style: solid; */
-    box-shadow: -1px -1px 3px black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent transparent transparent black;
+    box-shadow: -1px -1px 3px black, -1 -1px 3px black;
 }
 .mobileContainer{
     height: 100vh;
