@@ -75,7 +75,12 @@ flex-direction: column;
     height: 50px;
     width: 50px;
     border-radius: 100%;
-    background-color: red;
+    position: relative;
+    /* background-color: red; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nameDiv div{
     flex: 1;
@@ -262,7 +267,11 @@ flex-direction: column;
     .dpDiv div{
         height: 45px;
         width: 45px;
-        background-color: red;
+        /* background-color: red; */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .nameDiv div{
         flex: 1;

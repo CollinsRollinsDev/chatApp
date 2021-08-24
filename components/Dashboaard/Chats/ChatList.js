@@ -46,7 +46,7 @@ const dispatch = useDispatch()
          }
        
       <div className={styles.dp}>
-      {/* <Image src={chat.img} layout="fill" /> */}
+      <Image src="/defaultImg1.png" alt="Default Picture" layout="fill" />
       </div>
       <div className={styles.details}>
         <div className={styles.username}>

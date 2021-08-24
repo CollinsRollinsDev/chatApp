@@ -3,6 +3,8 @@ import { ContactDetails } from "./ContactDetails";
 import AddNewFriend from "../Contacts/AddNewFriend";
 import { useState, useEffect } from "react";
 import { useContacts } from "../../../Context/ContactsProvider";
+import Image from 'next/image'
+
 
 
 const Contacts = () => {
@@ -15,7 +17,7 @@ const Contacts = () => {
     return (
       <div key={contact.token} className={styles.msgArea}>
         <div className={styles.dp}>
-          {/* <Image src={contact.img} layout="fill" /> */}
+          <Image src="/defaultImg1.png" alt="Default Picture"  layout="fill" />
         </div>
         <div className={styles.details}>
           <div className={styles.username}>{contact.name}</div>

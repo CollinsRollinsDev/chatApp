@@ -53,7 +53,14 @@ const OpenChats = () => {
       <section className={styles.container}>
         <section className={styles.header}>
           <div className={styles.dpDiv}>
-            <div></div>
+            <div>
+            <Image 
+                  src="/defaultImg1.png"
+                  layout="fill"
+                  alt="Default Profile picture"
+                
+                />
+            </div>
           </div>
           <div className={styles.nameDiv}>
             <div className={styles.username}>{selectedConversation && selectedConversation.recipients[0].name}</div>
@@ -121,7 +128,14 @@ const OpenChats = () => {
 <section style={displaying} className={styles.mobileContainer}>
         <section className={styles.header}>
           <div className={styles.dpDiv}>
-            <div></div>
+            <div>
+                <Image 
+                  src="/defaultImg1.png"
+                  layout="fill"
+                  alt="Default Profile picture"
+                
+                />
+            </div>
           </div>
           <div className={styles.nameDiv}>
             <div className={styles.username}>{selectedConversation && selectedConversation.recipients[0].name}</div>
