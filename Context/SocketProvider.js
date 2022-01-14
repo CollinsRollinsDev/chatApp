@@ -11,7 +11,7 @@ export const SocketProvider = ({id, children}) => {
     const [socket, setSocket] = useState()
 
     useEffect(() => {
-      const newSocket = io("https://chatloopbackend.vercel.app/", { query:{ id } })
+      const newSocket = io("https://chatloopbackend.vercel.app", { query:{ id } })
       setSocket(newSocket)
       return () => newSocket.close();
     }, [id])
