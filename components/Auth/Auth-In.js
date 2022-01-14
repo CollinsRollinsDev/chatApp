@@ -21,7 +21,7 @@ const handleCreateClick = (e) => {
         <>
                 <section className={styles.container}>
                         <form>
-                            <input type="text" placeholder="Enter Auth Token" ref={idRef} />
+                            <input type="text" placeholder="Enter Auth Token Here.." ref={idRef} />
                             <div className={styles.btnDiv}>
                             <button onClick={handleLoginClick} className={styles.login}>Login To Chat</button>
                             <button onClick={handleCreateClick}  className={styles.create}>Create Token</button>
